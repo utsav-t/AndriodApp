@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Chat with Friends</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar">
+        <h2>Online</h2>
+        <ul id="users"></ul>
+      </aside>
+
+      <main class="chat">
+        <header class="topbar">
+          <input id="username" placeholder="Choose a username..." />
+          <button id="save-username">Set</button>
+          <span id="status"></span>
+        </header>
+
+        <ul id="messages" class="messages"></ul>
+        <div id="typing" class="typing" hidden></div>
+
+        <form id="form" class="composer" autocomplete="off">
+          <input id="input" placeholder="Type a message..." />
+          <button type="submit">Send</button>
+        </form>
+      </main>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/client.js"></script>
+  </body>
+</html>
